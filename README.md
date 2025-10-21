@@ -1,11 +1,9 @@
-# 🌌 Ecos de Valinor
-
 **Ecos de Valinor** is an **interactive narrative web game** inspired by Tolkien’s mythology.  
 It combines **storytelling, choice-based gameplay, and web development** to encourage reading through immersive digital experiences.
 
 ---
 
-## ✨ Overview
+## Overview
 
 In *Ecos de Valinor*, players embark on a journey across a mystical land inspired by Middle-earth.  
 Every decision influences the story’s outcome and the player’s alignment — either with **the Light** or **the Darkness**.
@@ -14,7 +12,7 @@ The project was developed as part of my **Final Degree Project (TFG)** in Web Ap
 
 ---
 
-## 🧙‍♂️ Features
+## Features
 
 - 📖 **Interactive narrative system** with branching choices  
 - ⚖️ **Karma mechanic** that affects story progression and player ranking  
@@ -25,7 +23,7 @@ The project was developed as part of my **Final Degree Project (TFG)** in Web Ap
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** PHP  
@@ -39,4 +37,4 @@ The project was developed as part of my **Final Degree Project (TFG)** in Web Ap
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/ecos-de-valinor.git
+   git clone https://github.com/elenavalencia00/valinor.git
