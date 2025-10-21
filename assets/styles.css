@@ -1,0 +1,242 @@
+html, body {
+  font-family: Aniron;
+  color: white;
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 70px;
+  color: white;
+  text-shadow: 2px 2px 5px silver, 0 0 10px white;
+  text-align: center;
+}
+
+body {
+  background-color: black;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height: 70vw;
+  min-height: 400px;
+  max-height: 750px;
+  min-width: 300px;
+  color: #eee;
+  border-radius: 0 0 20px 20px;
+  text-shadow: 0 2px 6px #000a;
+}
+
+.header:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.20) 40%, rgba(0, 0, 0) 100%);
+}
+
+.header:before {
+  content: "";
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #1B2030 url('images/valinor.jpg') 50% 0 no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  z-index: -2;
+}
+
+.header a {
+  color: #eee;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  margin: 20px;
+  padding: 0px 10px;
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 1;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.sides, .info {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.info {
+  width: 100%;
+  padding: 15% 10% 0 10%;
+  text-align: center;
+}
+
+#contenido {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  min-height: 100vh;
+  overflow: visible;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+#banners {
+  width: 70%;
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.banner {
+  position: relative;
+  width: 100%; 
+  max-width: 1300px;
+  height: 400px; 
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.title {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.descripcion {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out; 
+}
+
+.banner:hover .title {
+  opacity: 0; 
+}
+
+.banner:hover .descripcion {
+  opacity: 1; 
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner:hover {
+  transform: scale(1.05);
+}
+
+#form-container {
+  width: 30%;
+  margin-top: 40px;
+  position: sticky;
+  top: 40px;
+  padding-left: 20px;
+  height: max-content; 
+}
+
+nav ul {
+  font-size: 1.1em;
+  list-style: none;
+  display: flex; 
+  justify-content: space-around; 
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: white; 
+  text-decoration: none; 
+  display: block; 
+}
+
+nav ul li a:hover {
+  color: #fff33c;
+  text-shadow: 0 0 5px #ffef00; 
+}
+
+h1 {
+  font-family: Aniron;
+  color: white;
+}
+
+footer {
+  clear: both;
+  position: relative;
+  margin-top: 60px;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  color: white; 
+}
+
+
+@media screen and (max-width: 1024px) {
+  #contenido {
+    flex-direction: column;
+    padding: 0 3%;
+  }
+  
+  #banners, #form-container {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .banner {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+  
+  .banner {
+    height: 250px;
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecos de Valinor</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/ranking.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/One_Ring_Blender_Render.png">
+</head>
+<body>
+    <div class="header">
+        <div class="sides">
+            <a href="https://github.com/TensionMain" target="_blank" class="logo">GITHUB</a>
+        </div>
+        <div class="info">
+            <h1>Ecos de Valinor</h1>
+            <h3>Un juego de rol</h3>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="juego.html">Jugar</a></li>
+            <li><a href="ranking.html">Ranking</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+        </ul>
+    </nav>
+
+    
+    <div id="ranking">
+        <table border="1">
+            <thead>
+                <tr>
+                     <th>"Guardianes de la Tierra Media"</th>
+                <th>"Siervos de Mordor"</th>
+                </tr>
+            </thead>
+            <tbody id="ranking-body">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <div id="form-container"></div>
+
+    <footer>
+        <p>&copy; 2025 El Señor de los Anillos y sus contenidos son propiedad de Middle-earth Enterprises o sus respectivos titulares. Este sitio no está afiliado con ellos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+       function cargarRanking() {
+    fetch('ranking.php')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error en la respuesta: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            let tabla = document.getElementById("ranking-body");
+            tabla.innerHTML = "";
+            
+           
+            let maxFilas = Math.max(10, Math.max(data.luz.length, data.oscuridad.length));
+            
+            for (let i = 0; i < maxFilas; i++) {
+                let fila = "<tr>";
+                
+               
+                if (i < data.luz.length) {
+                    fila += `<td>${data.luz[i].usuario} (${data.luz[i].karma})</td>`;
+                } else {
+                    fila += "<td>-</td>";
+                }
+                
+                
+                if (i < data.oscuridad.length) {
+                    fila += `<td>${data.oscuridad[i].usuario} (${data.oscuridad[i].karma})</td>`;
+                } else {
+                    fila += "<td>-</td>";
+                }
+                
+                fila += "</tr>";
+                tabla.innerHTML += fila;
+            }
+        })
+        .catch(error => {
+            console.error("Error al cargar el ranking:", error);
+            document.getElementById("ranking-body").innerHTML = 
+                "<tr><td colspan='2'>Error al cargar el ranking. Por favor, inténtalo de nuevo más tarde.</td></tr>";
+        });
+}
+
+        window.onload = cargarRanking;
+    </script>
+</body>
+</html>

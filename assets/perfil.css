@@ -1,0 +1,96 @@
+.perfil-container {
+     background-image: url('images/fantasy.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 25px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-sizing: border-box;
+    color: #f1e3c0;
+}
+
+.perfil-container h2 { /*BIENVENIDO */
+	color: #ffcc00;
+    margin-bottom: 10px;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+
+.perfil-container h5 { /* Nombre logro */
+	font-family: Aniron;
+	
+}
+
+.perfil-container h5:hover {
+	color: #ffcc00; 
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; 
+    transition: 0.3s ease-in-out;
+}
+
+.perfil-container p { /*Tu personaje: */
+    background: linear-gradient(135deg, #fffd7b, #ffec54); 
+    font-size: 15px;
+    margin: 8px 0;
+    color: #2e2e2e; 
+    border-radius: 12px; 
+    padding: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #f0d300; 
+}
+
+
+
+
+.cuerpo {
+    
+    border-radius: 8px;
+    margin-top: 15px;
+   
+}
+
+.lista {
+	  background-color: rgba(0, 0, 0, 0.6);
+	 border-radius: 6px;
+	font-family: Candara;
+	text-align: left;
+	font-size: 20px;
+
+}
+
+.perfil-container .btn {
+    background: linear-gradient(to right, #ffcc00, #ff6f00);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+	text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.perfil-container .btn:hover {
+    background: linear-gradient(to right, #ff6f00, #ffcc00);
+    box-shadow: 0 0 15px #ffcc00;
+    transform: scale(1.05);
+}
+
+
+.inventario-img {
+    width: 300px;
+    height: auto;
+    display: block;
+   
+}
+
+.logros-img {
+	 width: 300px;
+    height: auto;
+    display: block;
+	
+}
